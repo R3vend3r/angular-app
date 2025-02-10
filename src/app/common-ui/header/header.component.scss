@@ -1,0 +1,109 @@
+header {
+    border-bottom: 1px solid;
+    overflow-x: hidden;
+}
+
+.container{
+    margin: 30px 50px;
+    height: 80px;
+    display: flex;
+    gap: 380px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    overflow: hidden;
+}
+
+.name_avatar {
+    display: flex;              /* Изменение на flex для выравнивания */
+    align-items: center;       /* Центрирует элементы по вертикали */
+    padding-left: 1em;
+    margin-left: 30px;
+    // margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.name_avatar h2{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--light-color);
+    font-weight: 500;
+}
+
+.menu {
+    margin-left: 30px;
+    border-radius: 50px;
+    margin-top: 15px;
+    width: 600px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.names_menu {
+    display: block;
+    cursor: pointer;
+}
+
+.names_menu a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--light-color);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 15px;
+    position: relative;
+    transition: color 0.3s ease, border-bottom 0.3s ease, background-color 0.3s ease;
+}
+
+.names_menu a::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    bottom: 15px;
+    left: 50%;
+    height: 2px;
+    transform: translateX(-50%);
+    background-color: #f4e00d;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.names_menu a:hover {
+    color: #f4e00d;
+}
+
+.names_menu a:hover::after {
+    opacity: 1; 
+}
+.profile-user {
+    padding-left: 50px;
+    text-align: center;
+    display: flex; /* Используйте flexbox для расположения элементов в ряд */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.profile-user a {
+    display: flex; /* Flexbox для элемента <a> */
+    align-items: center; /* Центрирование по вертикали */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: var(--light-color); /* Цвет текста */
+}
+
+.profile-user h3 {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--light-color);
+    margin-right: 40px;
+}
+
+.profile-user svg {
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+h3{
+    margin: 0;
+    font-weight: 400;
+}
+

@@ -1,0 +1,77 @@
+<div class="form">
+    <div class="head-form">
+        <h3>Мои Заметки</h3>
+        <div class="right">
+            <div class="sorted">
+                <label for="sortBy" style="padding-right: 5px;">Сортировать по:</label>
+                <select id="sortBy" (change)="onSortChange($event)">
+                    <option value="">Выберите сортировку</option>
+                    <option value="priority">Приоритету</option>
+                    <option value="difficulty">Сложности</option>
+                </select>
+            </div>
+            <button class="btn-green" (click)="openCreateProjectModal()">Новая задача</button>
+        </div>
+       
+    </div>
+    <hr>
+    <table *ngIf="notes.length > 0; else noNotes">
+            <thead>
+                <tr style="background-color: #CECECE;">
+                    <th class="col1" style="text-align: center;">Тема</th>
+                    <th class="Description" style="text-align: center;" >Описание</th>
+                    <th class="col2" style="text-align: center;">Приоритет</th>
+                    <th class="col2" style="text-align: center;">Сложность</th>
+                    <th class="col3" style="text-align: center;">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let note of notes">
+                    <td class="col1">{{ note.name }}</td>
+                    <td class="Description">{{ note.description | lowercase }}</td>
+                    <td class="col2" style="text-align: center;">
+                        <select [(ngModel)]="note.priority" (change)="updateNote(note)">
+                            <option value="" disabled>Задайте приоритет</option>
+                            <option value="unimportant">Несущественный</option>
+                            <option value="secondary">Второстепенный</option>
+                            <option value="important">Важный</option>
+                            <option value="critical">Критический</option>
+                        </select>
+                    </td>
+                    <td class="col2" style="text-align: center;">
+                        <select [(ngModel)]="note.difficulty" (change)="updateNote(note)">
+                            <option value="" disabled>Выберите сложность</option>
+                            <option value="easy">Простая</option>
+                            <option value="medium">Средняя</option>
+                            <option value="hard">Сложная</option>
+                            <option value="very-hard">Высокосложная</option>
+                        </select>
+                    </td>
+                    <td class="col3" style="text-align: center;">
+                        <button type="edit" (click)="openEditNoteModal(note)">Изменить</button>
+                        <button type="delete" (click)="deleteNote(note.id)">Удалить</button>
+                    </td>
+                </tr>
+            </tbody>
+</table>
+<ng-template #noNotes>
+    <div class="no-notes-message">
+        <h4 style="margin-bottom: 10px;">Сейчас у вас нет заметок.</h4>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 32C32 32 29 28 24 28C19 28 16 32 16 32M18 18H18.02M30 18H30.02M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" 
+            stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</ng-template>
+<app-redact-note
+    [note]="selectedNote" 
+    *ngIf="isEditModalOpen" 
+    (noteEdit)="redactNote($event)" 
+    (closeModal)="closeEditModal()">
+</app-redact-note>
+<app-create-new-project-modal 
+     *ngIf="isModalOpen" 
+     (projectCreated)="addProject($event)" 
+     (closeModal)="closeModal()">
+ </app-create-new-project-modal>
+</div>

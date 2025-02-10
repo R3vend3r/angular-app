@@ -4,7 +4,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "target": "ES2022",
+    "module": "ES2022", // Измените на CommonJS
     "strict": true,
+    "lib": ["es2022", "dom"],
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -15,19 +18,9 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // Или bundler, если хотите
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

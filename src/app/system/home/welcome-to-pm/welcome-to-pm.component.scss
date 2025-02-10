@@ -1,0 +1,23 @@
+.form_welcome{
+    border: 2px solid var(--primary-color);
+    margin: 50px 75px 0 75px;
+    background-color: var(--grey-color);
+    text-align: center;
+}
+
+.welcome{
+    color: var(--dark-color);
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.btnCreate{
+    margin: 40px 40px;
+}
+
+.btn{
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+.container{
+    margin: 50px 140px;
+    overflow: hidden;
+}
+
+.blocks{
+    display: flex;
+    justify-content: space-between; /* Упрощает выравнивание элементов */
+    margin-top: 50px;
+}
+
+.block-1{
+    display: block;
+    border: 1px  solid  var(--grey-color);
+    padding: 30px 10px 10px 20px;
+    // background-color: #15dfd5;
+    height: 450px;
+    width: 700px;
+    border-radius: 8px;
+}
+
+.block-2{
+    background-image: url(/img/studing.jpg);
+    // background-color: lightblue;
+    width: 720px;
+    display: block;
+    border-radius: 8px;
+}
+
+.block-3{
+    background-image: url(/img/speaking.jpg);
+    width: 720px;
+    display: block;
+    border-radius: 8px;
+}
+
+.block-4{
+    display: block;
+    padding: 30px 10px 10px 20px;
+    height: 450px;
+    width: 700px;
+    border: 1px solid  var(--grey-color);
+    border-radius: 8px;
+}
+
+.block-1 h5, .block-4 h5 {
+    padding-top: 30px;
+}
+
+.Slang{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

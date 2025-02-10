@@ -1,0 +1,62 @@
+.cont {
+    display: flex;
+    justify-content: space-between;
+    // gap: 900px; /* Уменьшен отступ */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid var(--dark-color);
+    border-radius: 20px; /* Уменьшен радиус */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    gap: 80px; /* Уменьшен отступ */
+    padding: 10px; /* Уменьшен отступ */
+}
+
+h4, p {
+    margin: 0;
+}
+
+.dot-button {
+    margin-top: 6px;
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    // background-color: var(--grey-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ots {
+    margin-left: 8px;
+    margin-right: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 5px);
+    grid-gap: 3px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.dot-button:active {
+    background-color: #bbb;
+}
+
+.dot-button:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.dot-button:hover {
+    background-color: #ddd;
+}

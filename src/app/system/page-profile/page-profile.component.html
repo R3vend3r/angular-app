@@ -1,0 +1,134 @@
+<!-- page-profile.component.html -->
+<app-header></app-header>
+<body>
+    <div class="form">
+        <div class="details">
+            <h5>Ваш профиль</h5>
+            <div class="separator"></div>
+            <div class="line"></div>
+        </div>
+        <div class="data">
+            <div class="photo_name"> 
+                <!-- <input type="file" id="fileInput" accept="image/*" style="display: none;" (change)="loadImage($event)"> -->
+                <img [src]="imageSrc" alt="avatar" id="avatarImage">   
+                <!-- (click)="triggerFileInput()" -->
+                <!-- <div class="upload-overlay" (click)="triggerFileInput()">
+                    <span>Загрузить <br> фото</span>
+                </div> -->
+            </div> 
+            <div class="name_surname">
+                <label for="name">ИМЯ</label>
+                <input type="text" id="name" name="name" [(ngModel)]="userData.name" required placeholder="" (blur)="saveName()">
+                <div *ngIf="userData.name && !validateName(userData.name) && userData.name.length > 0">
+                    <small>Имя должно содержать только буквы.</small>
+                </div>
+
+                <label for="surname">ФАМИЛИЯ</label>
+                <input type="text" id="surname" name="surname" [(ngModel)]="userData.surname" placeholder="" (blur)="saveSurname()">
+                <div *ngIf="userData.surname && !validateSurname(userData.surname) && userData.surname.length > 0">
+                    <small>Фамилия должна содержать только буквы.</small>
+                </div>
+            </div>  
+        </div>
+        <div class="details">
+            <div class="line2"></div>
+        </div>
+        <div class="data">
+            <div class="name_surname">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" [(ngModel)]="userData.phone"C  required placeholder="+7 (XXX) XXX-XX-XX" (blur)="savePhone()">
+                <div *ngIf="userData.phone && !validatePhone(userData.phone) && userData.phone.length > 0">
+                    <small>Телефон должен содержать корректный номер.</small>
+                  </div>
+                  <label for="birthDate">Дата рождения</label>
+                  <input type="date" id="birthDate" name="birthDate"[(ngModel)]="userData.birthDate" required (blur)="saveBirthDate()">
+                  <div *ngIf="userData.birthDate && !validateBirthDate(userData.birthDate) && userData.birthDate.length > 0">
+                      <small>Пользователь должен быть не младше 10 лет.</small>
+                  </div>
+                <label for="email">Емайл</label>
+                <app-email  [email]="userData?.email"></app-email>
+
+                <div class="button_cont"> 
+                    <p *ngIf="isPasswordChangeVisible" (click)="initiatePasswordChange()">Изменить пароль</p>
+                </div>
+                
+                <form #changePassword="ngForm" (ngSubmit)="onSubmit(changePassword)" *ngIf="isChangingPassword">
+                    <div class="change-password">
+                        <div class="change-password-margin">
+                            <label for="oldPassword">Введите старый пароль</label>
+                            <div>
+                                <input
+                                    type="password"
+                                    id="oldPassword"
+                                    name="oldPassword"
+                                    [(ngModel)]="oldPassword"
+                                    required
+                                    placeholder="Введите старый пароль"
+                                />
+                            </div>
+                        </div>
+                
+                        <div class="change-password-margin">
+                            <label for="newPassword">Введите новый пароль</label>
+                            <div>
+                                <input
+                                    type="password"
+                                    id="newPassword"
+                                    name="newPassword"
+                                    [(ngModel)]="newPassword"
+                                    required
+                                    placeholder="Введите новый пароль"
+                                />
+                            </div>
+                        </div>
+                
+                        <div class="change-password-margin">
+                            <label for="confirmNewPassword">Повторите пароль</label>
+                            <div>
+                                <input
+                                    type="password"
+                                    id="confirmNewPassword"
+                                    name="confirmNewPassword"
+                                    [(ngModel)]="confirmNewPassword"
+                                    required
+                                    placeholder="Подтвердите новый пароль"
+                                />
+                            </div>
+                            <p *ngIf="newPassword && confirmNewPassword && newPassword !== confirmNewPassword" class="error">
+                                Пароли не совпадают!
+                            </p>
+                        </div>
+                        <div class="button-container">
+                            <button class="btn-1" type="submit">Сохранить пароль</button>
+                            <div class="button_cont"> 
+                                <p  (click)="Cancel()">Отмена</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div [class.notification-success]="submitted && notificationMessage === 'Пароль успешно изменен'" 
+                [class.notification-error]="submitted && notificationMessage !== 'Пароль успешно изменен'">
+                    {{ notificationMessage }}
+                </div>
+            </div>
+            
+        </div>
+        <div class="details">
+            <div class="line2"></div>
+        </div>
+        <div class="data">
+            <div class="name_surname">
+                <div class="button-container-2">
+                    <div class="button-item">
+                        <label for="deleteAccount">Удалить Аккаунт</label>
+                        <a class="btn-delete" (click)="onDeleteUser()" ><span>Удалить</span></a>
+                    </div>
+                    <div>
+                        <label for="logout">Выход из Системы</label>
+                        <a class="btn-delete" (click)="onLogout()" ><span>Выход</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

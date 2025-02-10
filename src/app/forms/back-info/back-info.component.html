@@ -1,0 +1,31 @@
+<body>
+    <div class="container">
+        <div class="form">
+            <h3>Обратная связь</h3>
+            <form (ngSubmit)="onSubmit(feedbackForm)" #feedbackForm="ngForm">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" ngModel required placeholder="Имя">
+                    <div *ngIf="feedbackForm.controls['name']?.invalid && feedbackForm.controls['name']?.touched" class="error">
+                        Пожалуйста, введите ваше имя.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" ngModel required placeholder="Example@gmail.com">
+                    <div *ngIf="feedbackForm.controls['email']?.invalid && feedbackForm.controls['email']?.touched" class="error">
+                        Пожалуйста, введите корректный адрес электронной почты.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" placeholder="Напишите отзыв..." name="message" ngModel required rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" [disabled]="feedbackForm.invalid">Отправить</button>
+                </div>
+            </form>
+            <div class="notification" *ngIf="submitted">Сообщение отправлено</div>
+        </div>
+    </div>
+</body>

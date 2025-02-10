@@ -1,0 +1,196 @@
+body {
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    height: 120vh; /* Высота на весь экран */
+    background-color: #f0f0f0;
+}
+
+.form {
+    background-color: var(--light-color);
+    margin-top: 30px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    width: 1000px;
+    border-radius: 8px;
+}
+
+.details {
+    display: flex; /* Используем Flexbox для выравнивания */
+    flex-direction: column;
+}
+
+.details h5 {
+    padding-left: 50px;
+   margin: 0 10px 10px 10px;
+}
+
+.details .line {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    height: 2px; /* Высота линии */
+    background-color: var(--grey-color); /* Цвет линии */
+}
+
+.details .separator {
+    width: 13%; /* Ширина синей линии */
+    height: 2px; /* Высота синей линии */
+    background-color: #3859FF; /* Цвет синей линии */
+    margin-left: 50px;
+}
+
+.data{
+    margin-top: 30px;
+    padding-left: 50px;
+    display: flex;
+
+}
+.photo_name {
+    position: relative; 
+    overflow: hidden; 
+    margin-right: 80px;
+    width: 160px; /* Увеличиваем ширину контейнера */
+    height: 160px; /* Увеличиваем высоту контейнера */
+}
+
+.photo_name img {
+    width: 100%;  /* Занимаем 100% контейнера */
+    height: 100%; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+// .upload-overlay {
+//     position: absolute; 
+//     bottom: 0; /* Позиционируем наложение внизу */
+//     left: 50%; 
+//     transform: translateX(-50%); /* Центрируем по горизонтали */
+//     background-color: rgba(0, 0, 0, 0.3); 
+//     color: white;
+//     width: 100%; /* Занимаем всю ширину контейнера */
+//     height: 50%; /* Занимаем нижнюю половину контейнера */
+//     border-radius: 0 0 80px 80px; /* Закругляем нижние углы для создания половинного овала */
+//     display: flex; /* Центрируем текст */
+//     justify-content: center; /* Горизонтальное центрирование */
+//     align-items: center; /* Вертикальное центрирование */
+//     opacity: 0; /* Начальная непрозрачность */
+//     transition: opacity 0.3s; /* Плавный переход */
+// }
+
+
+.upload-overlay span{
+    text-align: center;
+}
+
+// .photo_name:hover .upload-overlay {
+//     opacity: 1; /* Увеличиваем непрозрачность при наведении */
+// }
+
+.name_surname{
+    display: flex; /* Используем Flexbox для выравнивания */
+    flex-direction: column;
+}
+
+.details .line2 {
+    margin-top: 20px;
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    height: 2px; /* Высота линии */
+    background-color: var(--grey-color); /* Цвет линии */
+}
+
+.change-password-margin{
+    margin: 15px 0 10px 0;
+}
+
+.button-container-2 {
+    display: flex;
+    gap: 400px;
+    // justify-content: space-between;
+    
+}
+.button-container{
+    display: flex;
+    gap: 50px;
+}
+.button-container button{
+    margin-top: 10px;
+    width: 140px;
+    height: 40px;
+}
+
+.btn-1{
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--light-color);
+    border-radius: 8px;
+}
+
+.button-container-2 {
+    display: flex;
+    flex-direction: row; /* Изменяем направление на колонку */
+    align-items: center; /* Центрируем кнопки по горизонтали */
+    gap: 400px; /* Уменьшаем расстояние между кнопками */
+}
+
+.button-item {
+    display: flex;
+    flex-direction: column; /* Выравниваем метку и кнопку в колонку */
+    align-items: center; /* Центрируем содержимое подметкой */
+}
+
+.btn-delete {
+    margin-top: 10px; /* Отступ сверху для кнопки */
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fdeaea;
+    color: #f47878;
+    display: flex; /* Добавляем Flexbox для выравнивания текста */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+}
+
+.button_cont p {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #7a808d;
+}
+
+.notification-success  {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+
+.notification-error  {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b32222;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+input {
+    border-radius: 8px;
+    width: 250px;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: 10px;
+    // margin-bottom: 30px;
+    border: 1px solid var(--grey-color);
+}
+
+label {
+    margin-top: 15px;
+}

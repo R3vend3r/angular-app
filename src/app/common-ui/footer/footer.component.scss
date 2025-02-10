@@ -1,0 +1,33 @@
+footer {
+    width: 100%;
+    background-color: var(--footer-color);
+    overflow: hidden;
+}
+.footer_contact{
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    padding: 50px 200px ;
+}
+.container{
+    color: var(--light-color);
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+}
+
+.container p{
+    font-size: 10px;
+}
+
+.icons_contact{
+    display: grid;
+    justify-content: flex-end;
+    align-self: center;
+    grid-template-columns: repeat(4, 80px);
+}
+
+.icons_contact img{
+    background-color: var(--light-color);
+    display: inline;
+    border-radius: 10px;
+    width: 40px;
+}

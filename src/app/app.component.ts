@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { SystemRoutingModule } from './app.routes';
+import { HeaderComponent } from "./common-ui/header/header.component";
+import { FooterComponent } from "./common-ui/footer/footer.component";
+import { DiaryStatisticsComponent } from './forms/diary-statistics/diary-statistics.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, SystemRoutingModule, HeaderComponent, FooterComponent, DiaryStatisticsComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ProjectMind';
+   currentPage = ' ';
+
+   changePage(page: string){
+    this.currentPage = page;
+   }
 }

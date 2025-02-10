@@ -1,0 +1,56 @@
+<div class="ava">
+  <header>
+    <div class="name_avatar">
+      <h2>RecordHere</h2> 
+    </div>
+    <div class="button">
+      <button class="btn" (click)="toggleAuth()">
+        {{ isRegistering ? 'Войти' : 'Войти' }}
+      </button>
+    </div>
+  </header>   
+  <app-hi-start></app-hi-start>
+  <div class="scroll-to-reviews">
+    <div class="button">
+      <button class="btn" (click)="scrollToReviews()">Посмотрите наши отзывы ниже</button>
+    </div>
+  </div>
+</div>
+
+<div class="reviews-container" id="reviews">
+  <h2 style="margin-bottom: 10px;">Отзывы по сайту</h2>
+  <div class="reviews-grid">
+    <div *ngFor="let review of filteredReviews">
+      <app-rewies [review]="review"></app-rewies>
+    </div>
+  </div>
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 16L16 24M16 24L24 32M16 24H32M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4
+         35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="#1E1E1E" 
+         stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <span>Страница {{ currentPage }} из {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 32L32 24M32 24L24 16M32 24H16M44 24C44 35.0457 
+        35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 
+        4C35.0457 4 44 12.9543 44 24Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Иконка для перехода к отзывам -->
+
+
+<div class="container" id="container">
+  <ng-container *ngIf="!isRegistering; else loginTemplate">
+    <app-registration (submit)="onRegisterSubmit()"></app-registration>
+  </ng-container>
+  <ng-template #loginTemplate>
+    <app-login (submit)="onLoginSubmit()"></app-login>
+  </ng-template>
+</div>

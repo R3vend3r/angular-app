@@ -1,0 +1,20 @@
+<body>
+    <div class="form-container login-container">
+        <form [formGroup]="form1" (ngSubmit)="onLoginSubmit()">
+          <h1>Войти<br> как админ</h1>
+          <div class="form-control2">
+            <input type="login" class="login-2" name="loginLogin" (input)="validateAdminAccess()" formControlName="admin1" placeholder="LoginAdmin" required />
+            <small class="login-error-2">{{ adminnameError }}</small>
+          </div>
+          <div class="form-control2">
+            <input type="password" class="password-2" name="loginPassword" (input)="validatePassword()" formControlName="password1" placeholder="пароль" required />
+            <small class="password-error-2">{{ passwordError }}</small>
+          </div>
+  
+          <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+          </div>
+          <button type="submit" [disabled]="form1.invalid">Войти</button>
+        </form>
+    </div>
+</body>

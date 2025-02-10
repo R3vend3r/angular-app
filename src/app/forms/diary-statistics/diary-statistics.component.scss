@@ -1,0 +1,21 @@
+.component{
+    margin: 20px;
+    padding-left: 70px;
+}
+.parent-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+    // height: 100vh; /* Высота родительского контейнера (например, 100% высоты окна) */
+}
+
+.chart-container {
+    position: relative;
+    width: 800px; /* Фиксированная ширина 400px */
+    height: 400px; /* Фиксированная высота 400px */
+}
+canvas {
+    width: 100% !important;  /* Заставляем canvas занимать полную ширину */
+    height: 100% !important; /* Заставляем canvas занимать полную высоту */
+}

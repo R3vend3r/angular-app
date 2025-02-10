@@ -1,0 +1,248 @@
+.form {
+    margin: 70px;
+    border: 1px solid var(--dark-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.head-form {
+    display: flex;
+    justify-content: space-between; /* Упрощает выравнивание элементов */
+    align-items: center; /* Центрирует элементы по вертикали */
+    padding: 20px 30px 20px 42px; /* Увеличен отступ для лучшего визуального восприятия */
+
+    background-color: var(--light-color); /* Добавлен фоновый цвет для заголовка */
+}
+
+// .body-form {
+//     padding: 20px;
+// }
+table {
+    width: calc(100% - 80px); /* Занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убираем отступы между ячейками */
+    margin: 40px;
+}
+
+.col1 {
+    width: 100px; /* Фиксированная ширина колонны */
+}
+
+.col2 {
+    width: 200px; /* Фиксированная ширина колонны */
+}
+
+.col3 {
+    width: 200px; /* Фиксированная ширина колонны */
+}
+
+th, td {
+    padding: 20px 20px 20px 40px; /* Внутренний отступ для ячеек */
+    text-align: left; /* Выравнивание текста в ячейках */
+    border: 1px solid var(--grey-color); /* Граница между строками */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+    word-wrap: break-word; /* Поддержка более старыми браузерами */
+    white-space: normal; /* Позволяет тексту переноситься на новую строку */
+}
+
+th {
+    background-color: var(--grey-light-color); /* Фоновый цвет заголовка */
+    padding-left: 20px; /* Отступ слева для заголовков */
+    padding-right: 20px; /* Отступ справа для заголовков */
+}
+
+.Description {
+    max-width: 500px; /* Максимальная ширина */
+    width: 400px; /* Фиксированная ширина */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+    word-break: break-word; /* Перенос слов */
+    white-space: normal; /* Позволяет тексту переноситься на новую строку */
+}
+
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Убираем подчеркивания */
+    padding: 15px 8px; /* Отступы внутри кнопки */
+    color: var(--dark-color); /* Цвет текста */
+    border-radius: 5px; /* Округление углов */
+    transition: background-color 0.3s; /* Эффект при наведении */
+}
+
+.nav-button:hover {
+    background-color: var(--grey-color); /* Цвет фона при наведении */
+}
+
+.counter {
+    padding-top: 22px;
+}
+
+.no-notes-message {
+    text-align: center; /* Центрируем текст */
+    margin-top: 50px; /* Отступ сверху */
+    font-size: 18px; /* Размер шрифта */
+    color: var(--dark-color); /* Цвет текста */
+    margin-bottom: 50px;
+}
+
+.btn-green {
+    background-color: var(--green-color);
+    color: var(--light-color);
+    border: none;
+    font-size: 12px;
+    width: 140px; /* Установлена фиксированная ширина */
+    height: 50px;
+    margin-left: 15px; /* Отступ слева для кнопки */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #3CB55F; /* Цвет фона при наведении */
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid var(--dark-color);
+    border-radius: 20px; /* Уменьшен радиус */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    gap: 150px; /* Уменьшен отступ */
+    padding: 10px; /* Уменьшен отступ */
+}
+
+.form-group p {
+    max-width: 1000px; /* Максимальная ширина 1000px */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+    overflow: hidden; /* Скрыть переполнение */
+    white-space: normal; /* Позволяет тексту переноситься на новую строку */
+}
+
+h4, p {
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--blue-color); /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px; /* Внутренний отступ */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.dropdown-content {
+    display: none; /* Скрываем выпадающий список по умолчанию */
+    position: absolute; /* Абсолютное позиционирование */
+    background-color: #f9f9f9; /* Фоновый цвет выпадающего списка */
+    min-width: 160px; /* Минимальная ширина */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Тень */
+    z-index: 1; /* Устанавливаем порядок отображения */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показываем выпадающий список при наведении */
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px; /* Закругление углов кнопок */
+    cursor: pointer;
+  }
+  
+  button[type="edit"] {
+    background-color: var(--green-color); /* Цвет кнопки "Add Project" */
+    color: white;
+  }
+
+  .right{
+    display: flex;
+  }
+
+  .sorted {
+    margin-top: 14px;
+  }
+  
+  select{
+    padding: 3px;
+  }
+  button[type="delete"] {
+    background-color: #b12b38; /* Цвет кнопки "Cancel" */
+    color: white;
+  }
+
+// .dot-button { 
+//     margin-top: 6px; 
+//     display: flex; 
+//     margin-right: 40px; 
+//     align-items: center; 
+//     width: 36px; 
+//     height: 36px; 
+//     border-radius: 50%; // 
+//     background-color: var(--grey-color); 
+//     border: none; 
+//     outline: none; 
+//     cursor: pointer; 
+//     transition: background-color 0.3s; }
+
+// .ots { 
+//     margin-left: 8px; 
+//     margin-right: 8px; 
+//     display: grid; 
+//     grid-template-columns: repeat(3, 5px); 
+//     grid-gap: 3px; 
+// }
+
+// .dot { 
+//     width: 4px; 
+//     height: 4px; 
+//     border-radius: 50%; 
+//     background-color: black; 
+// }
+
+// .dot-button:active { 
+//     background-color: #bbb; 
+// }
+
+// .dot-button:focus-visible { 
+//     outline: 2px solid rgba(255, 255, 255, 0.5);
+//  }
+
+// .dot-button:hover { 
+//     background-color: #ddd; 
+// }
+
+// .difficulty-select {
+//     width: 50%; /* Занимает всю ширину ячейки */
+//     padding: 8px; /* Добавляет внутренний отступ для лучшего восприятия */
+//     border: 1px solid #ccc; /* Устанавливает границу */
+//     border-radius: 4px; /* Скругляет углы */
+//     background-color: #fff; /* Устанавливает цвет фона */
+//     font-size: 16px; /* Устанавливает размер шрифта */
+//     appearance: none; /* Убирает стандартный стиль браузера */
+//     cursor: pointer; /* Указывает, что элемент кликабельный */
+// }
+
+// /* Дополнительные стили для состояния фокуса */
+// .difficulty-select:focus {
+//     border-color: #66afe9; /* Цвет границы при фокусе */
+//     outline: none; /* Убирает стандартный контур */
+// }
+
+// /* Стили для опций */
+// .difficulty-select option {
+//     padding: 10px; /* Добавляет внутренний отступ для опций */
+// }

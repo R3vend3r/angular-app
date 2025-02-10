@@ -1,0 +1,91 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Задаем приоритет над другими элементами */
+  }
+  
+  .overlay-modal {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--dark-color);
+    border-radius: 10px; /* Закругление углов формы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Ширина модального окна */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 10px; /* Отступ между полями ввода */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Закругление углов полей ввода */
+  }
+  
+  textarea {
+    margin-bottom: 10px; /* Отступ между полями ввода */
+    padding: 10px;
+    max-height: 300px;
+    min-height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Закругление углов textarea */
+    resize: vertical; /* Позволяет изменять размер только по вертикали */
+  }
+  
+  .is-invalid {
+    border-color: red; /* Красная рамка для полей с ошибками */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Центрирование кнопок */
+    gap: 10px; /* Отступ между кнопками */
+  }
+  
+  button {
+ 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Закругление углов кнопок */
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background-color: var(--green-color); /* Цвет кнопки "Add Project" */
+    color: white;
+  }
+  
+  button[type="button"] {
+    background-color: #dc3545; /* Цвет кнопки "Cancel" */
+    color: white;
+  }
+
+  .error-message {
+    color: red; /* Цвет текста ошибки */
+    font-size: 12px; /* Размер шрифта */
+    margin: 5px; /* Отступ сверху */
+    text-align: left; /* Выравнивание текста */
+}
+
+.option-1{
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 6px;
+}
+
+.option-2{
+  padding: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}

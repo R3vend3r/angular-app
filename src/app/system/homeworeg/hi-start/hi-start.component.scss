@@ -1,0 +1,38 @@
+
+.container {
+    position: relative; /* Позиционируем элемент относительно родителя */
+    padding-top: 125px;
+    padding-left: 80px;
+    z-index: 2; /* Делаем контейнер выше затемняющего слоя */
+}
+
+h1 {
+    color: var(--light-color);
+    margin-top: 30px;
+}
+
+h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--light-color);
+    line-height: 30px;
+}
+
+.btn {
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--lightgreen-color);
+    margin-bottom: 30px;
+}
+
+.btn:hover {
+    background-color: #72B3FC;
+}
+
+.container-picture {
+    display: flex;
+    gap: 60px;
+    margin-top: 30px;
+}

@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #686c78;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  
+  .form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    height: 400px;
+    width: 400px; /* Ширина формы */
+  }
+  
+  .form-control2 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px; /* Отступ между полями */
+  }
+  
+  input {
+    background-color: #f9f9f9;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #adadad;
+    padding: 12px 10px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 16px; /* Размер шрифта */
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #2691d9; /* Цвет нижней границы при фокусе */
+  }
+  
+  small {
+    color: red;
+    font-size: 12px;
+    display: block; /* Убедитесь, что small занимает всю ширину */
+    margin-top: 5px; /* Отступ сверху для сообщения об ошибке */
+  }
+  
+  button {
+    border-radius: 20px;
+    border: none;
+    background-color: #686c78;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 20px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%; /* Кнопка на всю ширину */
+  }
+  
+  button:hover {
+    background-color: #71e6e8; /* Цвет кнопки при наведении */
+  }
+  
+  .error-message {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-top: 10px; /* Отступ сверху для сообщения об ошибке */
+    margin-bottom: 10px;
+}
+
+button:disabled {
+    background-color: #ccc; /* Цвет кнопки, когда она отключена */
+    cursor: not-allowed; /* Изменение курсора на "нельзя" */
+  }

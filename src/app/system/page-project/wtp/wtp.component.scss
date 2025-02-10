@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wpf {
+    position: relative;
+    background-image: url("/img/flower.jpg"); /* Путь к изображению */
+    background-size: cover; /* Заполняет элемент изображением */
+    background-position: center; /* Центрирует изображение */
+    margin: 20px;
+    width: 1000px;
+    height: 300px;
+    color: var(--light-color);
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.wpf::before{
+    content: ""; /* Создаем пустой псевдоэлемент */
+    position: absolute; /* Позиционируем абсолютно в пределах родителя */
+    top: 0; /* Сверху */
+    left: 0; /* Слева */
+    right: 0; /* Справа */
+    bottom: 0; /* Снизу */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.wpf h3, .wpf p {
+    position: relative; /* Позиционируем текст */
+    z-index: 2; /* Устанавливаем текст выше полупрозрачного фона */
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.wpf h3{
+    padding-top: 55px;
+}

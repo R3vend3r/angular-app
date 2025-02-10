@@ -1,0 +1,122 @@
+body {
+    background-color: var(--primary-color);
+    height: 100vh;
+}
+
+.admin-container {
+    
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between; /* Распределяет пространство между элементами */
+    align-items: center; /* Выравнивает элементы по центру по вертикали */
+}
+
+.loading {
+    font-size: 18px;
+    color: gray;
+}
+
+.reviews-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.col1 {
+    width: 100px; /* Фиксированная ширина колонны */
+    max-width: 200px; /* Максимальная ширина */
+}
+
+.Description {
+    max-width: 700px; /* Максимальная ширина */
+    width: 600px; /* Фиксированная ширина */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+    word-break: break-word; /* Перенос слов */
+    white-space: normal; /* Позволяет тексту переноситься на новую строку */
+}
+
+.center {
+    text-align: center; /* Центрирование содержимого по горизонтали */
+    padding: 10px 0; /* Добавляем вертикальный отступ для ячейки */
+}
+
+.center button {
+    display: block; /* Переводим кнопки в блочный режим, чтобы они располагались в столбик */
+    margin: 10px auto; /* Центрируем кнопки и добавляем отступ сверху и снизу */
+    width: 100px; /* Установите ширину кнопок, если это необходимо */
+}
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-green{
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-cancel{
+    background-color: #ed5f5f;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #cb3c4b; /* Цвет кнопки "Cancel" */
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-green:hover{
+    background-color: #2fa550;
+}
+
+
+.btn-cancel:hover{
+    background-color: #e7505f;
+}
+
+
+.btn-delete:hover{
+    background-color: #eb4555;
+}
+
+
+.no-reviews {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+    padding: 20px 0; /* Добавляем отступы для лучшего отображения */
+}

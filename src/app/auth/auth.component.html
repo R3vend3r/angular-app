@@ -1,0 +1,76 @@
+<body>
+  <div class="container" id="container" #container [ngClass]="{'right-panel-active': isRegistering}">
+    <div class="form-container register-container" *ngIf="isRegistering">
+      <form [formGroup]="form2" (ngSubmit)="onRegisterSubmit()">
+        <h1>Регистрация</h1>
+        <div class="form-control">
+          <input type="text" formControlName="username" placeholder="Имя" />
+          <small *ngIf="form2.get('username')?.invalid && form2.get('username')?.touched">
+            *Имя должно содержать от 4 до 20 символов.
+          </small>
+        </div>
+        <div class="form-control">
+          <input type ="email" formControlName="email" placeholder="Email" />
+          <small *ngIf="form2.get('email')?.invalid && form2.get('email')?.touched">
+            *Email не валиден.
+          </small>
+        </div>
+        <div class="form-control">
+          <input type="password" formControlName="password" placeholder="Пароль" />
+          <small *ngIf="form2.get('password')?.invalid && form2.get('password')?.touched">
+            *Пароль должен содержать минимум 8 символов.
+          </small>
+        </div>
+        <button type="submit" [disabled]="form2.invalid">Регистрация</button>
+      </form>
+    </div>
+
+    <div class="form-container login-container" *ngIf="!isRegistering">
+      <form [formGroup]="form1" (ngSubmit)="onLoginSubmit()">
+        <h1>Войти<br> в аккаунт</h1>
+        <div class="form-control2">
+          <input type="email" class="email-2"  name="loginEmail" (input)="validateEmail()" 
+          formControlName="email1" placeholder="email" required />
+          <small class="email-error-2">{{ emailError }}</small>
+          <span></span>
+        </div>
+        <div class="form-control2">
+          <input type="password" class="password-2"  name="loginPassword" 
+          (input)="validatePassword()" formControlName="password1" placeholder="пароль" required />
+          <small class="password-error-2">{{ passwordError }}</small>
+          <span></span>
+        </div>
+
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe">Запомнить меня</label>
+        </div>
+          <div class="pass-link">
+            <a href="#">забыли пароль?</a>
+          </div>
+        </div>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+        <button type="submit" value="submit" [disabled]="form1.invalid">Войти</button>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1 class="title">Привет</h1>
+          <p>Если у вас есть учетная запись, войдите в систему здесь и получайте удовольствие</p>
+          <button class="ghost" id="login" (click)="toggleAuth2()">Войти в систему</button>
+        </div>
+
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">Начни своё <br /> путешествие сейчас</h1>
+          <p>Если у вас еще нет учетной записи, присоединяйтесь к нам и начните свое путешествие</p>
+          <button class="ghost" id="register" (click)="toggleAuth1()">Регистрация</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

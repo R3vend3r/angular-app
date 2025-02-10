@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+@import "font";
+
+:root{
+    --dark-color: #000000;
+    --footer-color: #2c353e;
+    --light-color: #ffffff;
+    --primary-color: #5BA3F5;
+    --grey-color: #E9E9E9;
+    --green-color: #1F883D;
+    --lightgreen-color: #35AFBF;
+}
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+.btn{
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    padding: 20px 20px;
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.btn:hover{
+    background-color: #72B3FC;
+}
+
+.names_menu{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.text_welcome{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+h4 {
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+h5{
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h6 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 300;
+}
+
+p{
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+span{
+    font-weight: 400;
+    font-size: 12px;
+}

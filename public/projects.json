@@ -1,0 +1,53 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "login": "23-03740",
+      "password": "$2b$10$cXn47lu8QBecjrQwz.HateUNKkV8xzO6JuC255lbviKk.wEzFH7Jm",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Никита",
+          "email": "isbronekit@gmail.com",
+          "message": "Отзывы работают",
+          "isPublished": true
+        },
+        {
+          "id": 3,
+          "name": "Андрей",
+          "email": "kazahstan228@gmail.com",
+          "message": "Тестирование программы — это процесс проверки её функциональности, производительности и безопасности. Оно включает в себя разные методы, такие как юнит-тестирование, интеграционное тестирование и системное тестирование, чтобы обеспечить качество.",
+          "isPublished": true
+        },
+        {
+          "id": 5,
+          "name": "Никита",
+          "email": "isbronekit@gmail.com",
+          "message": "выфвывфвы",
+          "isPublished": false
+        },
+        {
+          "id": 6,
+          "name": "Dave",
+          "email": "Likeee782@zoza.com",
+          "message": "еще один отзыв",
+          "isPublished": true
+        },
+        {
+          "id": 7,
+          "name": "Евгенич",
+          "email": "kazahstan228@gmail.com",
+          "message": "проверка на изменения",
+          "isPublished": true
+        },
+        {
+          "id": 8,
+          "name": "Коля",
+          "email": "KolyanLegenda2005@mail.ru",
+          "message": "сайт хороший",
+          "isPublished": false
+        }
+      ]
+    }
+  ]
+}

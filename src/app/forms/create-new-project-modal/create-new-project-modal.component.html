@@ -1,0 +1,27 @@
+<div class="modal-overlay" (click)="close()">
+  <div class="overlay-modal" (click)="$event.stopPropagation()">
+    <h3>Create new record</h3>
+    <form (ngSubmit)="addProject()" #projectForm="ngForm">
+      <input 
+        type="text" 
+        [(ngModel)]="projectName" 
+        name="projectName" 
+        placeholder="Record Name" 
+        (input)="onProjectNameChange()"
+        [ngClass]="{'is-invalid': projectNameInvalid}"
+      />
+      <div *ngIf="projectNameInvalid" class="error-message">Пожалуйста заполните поле имени заметки</div>
+      <textarea 
+        placeholder="Record Description" 
+        [(ngModel)]="projectDescription" 
+        name="projectDescription" 
+        rows="4" 
+        maxlength="500"
+      ></textarea> 
+      <div class="button-container">
+        <button type="submit" [disabled]="projectForm.invalid">Добавить задачу</button>
+        <!-- <button type="button" (click)="close()">Cancel</button> -->
+      </div>
+    </form>
+  </div>
+</div>

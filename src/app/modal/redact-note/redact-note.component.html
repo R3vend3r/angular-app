@@ -1,0 +1,29 @@
+<div class="modal-overlay" (click)="close()">
+    <div class="overlay-modal" (click)="$event.stopPropagation()">
+      <h3>Редактировать заметку</h3>
+      <form (ngSubmit)="redactNote()" #noteForm="ngForm">
+        <input 
+          type="text" 
+          [(ngModel)]="projectName" 
+          name="projectName" 
+          placeholder="Название заметки" 
+          
+          [ngClass]="{'is-invalid': projectNameInvalid}" 
+          required
+        />
+        <div *ngIf="projectNameInvalid" class="error-message">Имя заметки обязательно!</div>
+        <textarea 
+          placeholder="Описание заметки" 
+          [(ngModel)]="projectDescription" 
+          name="projectDescription" 
+          rows="4" 
+          maxlength="500" 
+          required
+        ></textarea> 
+        <div class="button-container">
+          <button type="submit" [disabled]="noteForm.invalid">Изменить</button>
+          <button type="button" (click)="close()">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
